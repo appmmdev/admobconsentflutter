@@ -12,9 +12,9 @@ class IntializationHelper {
             //
             debugGeography: DebugGeography.debugGeographyEea,
             testIdentifiers: [
-          '5352961EB7A3EB18E129296F16AE3207',
-          'EB9BBC5BD77D0D1B7784DEECE361F265',
-          'B08A7B4D8ACC3035224D2C173018813B'
+          '5352961EB7A3EB18E129296F16AE3207', // your testIdentifiers for test
+          'EB9BBC5BD77D0D1B7784DEECE361F265',// your testIdentifiers for test
+          'B08A7B4D8ACC3035224D2C173018813B'// your testIdentifiers for test
         ]));
     ConsentInformation.instance.requestConsentInfoUpdate(params, () async {
       if (await ConsentInformation.instance.isConsentFormAvailable()) {
