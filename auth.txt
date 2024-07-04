@@ -1,0 +1,21 @@
+//login user access
+
+
+Route::middleware('auth:sanctum')->prefix('v7')->group(function () {
+
+    // MusicController routes
+    Route::get('/musics', [MusicController::class, 'latestmusic']);
+});
+
+
+
+// Admin routes (protected by role)
+
+//need to create custom middare ware
+
+Route::middleware(['role:' . User::ROLE_ADMIN])->group(function () {
+
+    // PostController routes
+    Route::resource('posts', PostController::class)->except(['index', 'show']);
+
+});
